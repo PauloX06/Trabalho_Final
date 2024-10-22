@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro Equipamento</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/estilo.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <div class="page">
+            <nav class="slidebar">
+                <div class="container">
+                    <a href="" class="">
+                        <img class="logo" src="../imagens/Body club logo academia preto e branco.png">
+                    </a>
+                </div>
+                <div class="navbar navbar-expand-md">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#meumenu" 
+                        aria-controls="meumenu" aria-expanded="false" aria-label="Menu Exemplo">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="meumenu">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link align-middle px-0" href="">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link align-middle px-0" href="">Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link align-middle px-0" href="">Funcionários</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link align-middle px-0" href="">Serviços</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link align-middle px-0" href="">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link align-middle px-0" href="">Fornecedores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link align-middle px-0" href="">Equipamentos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class = "container">
+            <form>
+                
+                    <BR><BR>
+                    <h1>CADASTRO DE EQUIPAMENTOS</h1>
+                    <p>Cadastre um equipamento e mantenha seus dados atualizados</p>
+                    <HR><BR><BR>
+                        <!--PRIMEIRA LINHA-->
+                        <div class = "row">
+                            <div class="form-group col-4">
+                                <label>Nome:</label>
+                                <input type = "text" class = "form-control">
+                            </div>
+                            <div class="form-group col-4">
+                                <label>Descrição:</label>
+                                <input type = "text" class = "form-control">
+                            </div>
+                            <div class="form-group col-4">
+                                <label>Codigo:</label>
+                                <input type = "text" class = "form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <!--SEGUNDA LINHA-->
+                        <div class = "row">
+                            <div class="form-group col-4">
+                                <label>Quantidade:</label>
+                                <input type = "text" class = "form-control">
+                            </div>
+                            <div class="form-group col-4">
+                                <label>Valor Unitario:</label>
+                                <input type = "text" class = "form-control">
+                            </div>
+                            <div class="form-group col-4">
+                                <label>Fornecedor:</label>
+                                <select class="form-select">
+                                    <option value="">--Selecionar--</option>
+                                    <option value="1">Technogym</option>
+                                    <option value="2">Life Fitness</option>
+                                    <option value="3">Precor</option>
+                                    <option value="4">Nautilus</option>
+                                    <option value="5">Hammer Strength</option>
+                                    <option value="6">Matrix Fitness</option>
+                                    <option value="7">Cybex</option>
+                                    <option value="8">Bowflex</option>
+                                    <option value="9">NordicTrack</option>
+                                    <option value="10">Octane Fitness</option>
+                
+                                </select>
+                            </div>
+                        </div>
+
+                        <br><br><hr>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <button class="btn azul">
+                                    Novo <i class="bi bi-plus-circle"></i>
+                                </button>
+                                <button type="submit" class="btn btn-success">
+                                    Salvar <i class="bi bi-floppy"></i>
+                                </button>
+                                
+                                <button class="btn btn-warning">
+                                    Excluir <i class="bi bi-x-circle"></i>
+                                </button>
+                                <button class="btn btn-danger">
+                                    Cancelar <i class="bi bi-arrow-left-circle"></i>
+                                </button>
+                            </div>
+                
+                        </div>  
+                        <hr>
+                        <br>
+                        <div class="row">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Equipamento</th>
+                                    <th scope="col">Código</th>
+                                    <th scope="col">Preço</th>
+                                    <th scope="col">Quantidade</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Leg press 90</td>
+                                    <td>01</td>
+                                    <td>R$ 9.500,00</td>
+                                    <td>02</td>
+                                    <td>
+                                        <td>
+                                            <button class="btn btn-danger">
+                                                Deletar <i class="bi bi-arrow-left-circle"></i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-success">
+                                                Editar <i class="bi bi-pen"></i>
+                                            </button>
+                                        </td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Leg press 45</td>
+                                    <td>02</td>
+                                    <td>R$ 8.200,00</td>
+                                    <td>02</td>           
+                                    <td>
+                                        <button class="btn btn-success">
+                                            Editar <i class="bi bi-pen"></i>
+                                        </button>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Cadeira extensora</td>
+                                    <td>03</td>
+                                    <td>R$ 2.200,00</td>
+                                    <td>04</td>
+                                    <td>
+                                        <button class="btn btn-success">
+                                            Editar <i class="bi bi-pen"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Mesa flexora</td>
+                                    <td>04</td>   
+                                    <td>R$ 2.500,00</td>
+                                    <td>03</td>
+                                    <td>
+                                        <button class="btn btn-success">
+                                            Editar <i class="bi bi-pen"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        </div>
+    </body>
+</html>
