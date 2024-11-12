@@ -1,6 +1,6 @@
 
-{
-    let contador = 1;
+
+    let contadorProduto = 1;
 
     function salvarProduto() {
         const nomeProduto = document.getElementById("nomeProduto").value;
@@ -15,7 +15,7 @@
         const novaLinha = tabela.insertRow();
     
         novaLinha.innerHTML = `
-            <td>${contador++}</td>
+            <td>${contadorProduto++}</td>
             <td>${nomeProduto}</td>
             <td>${descricao}</td>
             <td>${codigo}</td>
@@ -48,12 +48,12 @@
         linha.remove();
     }
     
-}
+
 
         
     
-{
-    let contador = 1;
+
+    let contadorEquipamento = 1;
 
 
     function salvarEquipamento() {
@@ -99,10 +99,10 @@
         const linha = button.parentElement.parentElement;
         linha.remove();
     }
-}
 
-{
-    let contador = 1; 
+
+
+    let contadorCliente = 1; 
 
     function salvarCliente() {
         const nomeCliente = document.getElementById("nomeCliente").value;
@@ -155,10 +155,10 @@
         linha.remove();
     }
 
-}
 
-{
-    let contador = 1; 
+
+
+    let contadorFuncionario = 1; 
 
 
     function salvarFuncionario() {
@@ -172,7 +172,7 @@
         const novaLinha = tabela.insertRow();
 
         novaLinha.innerHTML = `
-            <td>${contador++}</td>
+            <td>${contadorFuncionario++}</td>
             <td>${nomeFuncionario}</td>
             <td>${cpf}</td>
             <td>${funcao}</td>
@@ -207,9 +207,9 @@
         linha.remove();
     }
 
-}
 
-{
+
+
     let contadorFornecedor = 1;
 
     function salvarFornecedor() {
@@ -256,4 +256,4 @@
         linha.remove();
     }
 
-}
+
