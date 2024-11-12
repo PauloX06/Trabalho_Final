@@ -257,3 +257,82 @@
     }
 
 
+
+        function salvarFicha() {
+            // Obter os valores dos campos do formulário
+            const ficha = {
+                objetivo: document.getElementById("objetivo").value,
+                treinos: document.getElementById("treinos").value,
+                sessoes: document.getElementById("sessoes").value,
+                inicio: document.getElementById("inicio").value,
+                validade: document.getElementById("validade").value,
+                treinoA: document.getElementById("treinoA").value,
+                treinoB: document.getElementById("treinoB").value,
+                professores: document.getElementById("professores").value,
+                observacoes: document.getElementById("observacoes").value,
+            };
+
+            // Salvar a ficha no localStorage
+            localStorage.setItem("ficha", JSON.stringify(ficha));
+
+            // Atualizar a exibição dos dados salvos
+            exibirFicha();
+            
+            // Limpar o formulário
+            document.getElementById("fichaForm").reset();
+        }
+
+        function exibirFicha() {
+            const ficha = JSON.parse(localStorage.getItem("ficha"));
+            if (ficha) {
+                document.getElementById("fichaDisplay").innerHTML = `
+                    <p><strong>Objetivo:</strong> ${ficha.objetivo}</p>
+                    <p><strong>Treinos:</strong> ${ficha.treinos}</p>
+                    <p><strong>Sessões:</strong> ${ficha.sessoes}</p>
+                    <p><strong>Início:</strong> ${ficha.inicio}</p>
+                    <p><strong>Validade:</strong> ${ficha.validade}</p>
+                    <p><strong>Treino A:</strong> ${ficha.treinoA}</p>
+                    <p><strong>Treino B:</strong> ${ficha.treinoB}</p>
+                    <p><strong>Professor:</strong> ${ficha.professores}</p>
+                    <p><strong>Observações:</strong> ${ficha.observacoes}</p>
+                `;
+                document.getElementById("dadosSalvos").classList.remove("d-none");
+            }
+        }
+
+        function editarFicha() {
+            const ficha = JSON.parse(localStorage.getItem("ficha"));
+            if (ficha) {
+                document.getElementById("objetivo").value = ficha.objetivo;
+                document.getElementById("treinos").value = ficha.treinos;
+                document.getElementById("sessoes").value = ficha.sessoes;
+                document.getElementById("inicio").value = ficha.inicio;
+                document.getElementById("validade").value = ficha.validade;
+                document.getElementById("treinoA").value = ficha.treinoA;
+                document.getElementById("treinoB").value = ficha.treinoB;
+                document.getElementById("professores").value = ficha.professores;
+                document.getElementById("observacoes").value = ficha.observacoes;
+                
+                // Ocultar a área de exibição
+                document.getElementById("dadosSalvos").classList.add("d-none");
+            }
+        }
+
+        function excluirFicha() {
+            // Remover a ficha do localStorage
+            localStorage.removeItem("ficha");
+
+            // Limpar a área de exibição
+            document.getElementById("fichaDisplay").innerHTML = "";
+            document.getElementById("dadosSalvos").classList.add("d-none");
+            alert("Ficha excluída com sucesso!");
+        }
+
+        function cancelarEdicao() {
+            document.getElementById("fichaForm").reset();
+        }
+
+        // Exibir a ficha salva ao carregar a página
+        window.onload = exibirFicha;
+   
+
